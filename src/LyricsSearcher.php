@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Chikis\LyricsSearcher;
+namespace Chikis;
 
 
 class LyricsSearcher

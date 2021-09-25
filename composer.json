@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Chikis\\LyricsSearcher\\": "src/"
+            "Chikis\\": "src/"
         }
     },
     "authors": [
