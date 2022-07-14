@@ -63,7 +63,7 @@ class LyricsSearcher
 
                     $tmp = explode(self::$delims[0], $data);
 
-                    if($tmp) {
+                    if($tmp && isset($tmp[1])) {
                         $response = explode(self::$delims[1], $tmp[1]);
                         return $response[0];
                     }
