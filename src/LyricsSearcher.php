@@ -60,11 +60,15 @@ class LyricsSearcher
                     $client = new \GuzzleHttp\Client();
                     $response = $client->request('GET', self::$url . $searchQuery);
                     $data = (string)$response->getBody();
-                    if(isset($delims) && isset($delims[1]) && isset($delims[0])) {
-                        return explode(self::$delims[1], explode(self::$delims[0], $data)[1])[0];
-                    } else {
-                        return '';
+
+                    $tmp = explode(self::$delims[0], $data);
+
+                    if($tmp) {
+                        $response = explode(self::$delims[1], $tmp[1]);
+                        return $response[0];
                     }
+
+                    return '';
                 } catch (\Exception $e) {
                     return '';
                 }
