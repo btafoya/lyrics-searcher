@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Chikis;
+namespace Btafoya;
 
 
 class LyricsSearcher

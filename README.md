@@ -10,11 +10,11 @@ composer require btafoya/lyrics-searcher
 ```php
 <?php
 
-use btafoya\LyricsSearcher\LyricsSearcher;
+use Btafoya\LyricsSearcher\LyricsSearcher;
 
 require('vendor/autoload.php');
 
-$lyric = \btafoya\LyricsSearcher::lyricsSearcher('blank space', 'taylor swift');
+$lyric = \Btafoya\LyricsSearcher::lyricsSearcher('blank space', 'taylor swift');
 
 echo '<pre>' . $lyric . '</pre>';
 ```
