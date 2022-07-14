@@ -56,9 +56,10 @@ class LyricsSearcher
         $searchQueries = self::getSearchQueries($artist, $song);
         $lyricsArr = array_map(
             function ($searchQuery) {
-                $client = new \GuzzleHttp\Client();
                 try {
-                    $data = $response = $client->request('GET', self::$url . $searchQuery);
+                    $client = new \GuzzleHttp\Client();
+                    $response = $client->request('GET', self::$url . $searchQuery);
+                    $data = (string)$response->getBody();
                     return explode(self::$delims[1], explode(self::$delims[0], $data)[1])[0];
                 } catch (\Exception $e) {
                     return '';
